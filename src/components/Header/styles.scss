@@ -5,6 +5,7 @@
   width: 100%;
   z-index: 50;
   background: url("../../assets/img/bg_header.jpg") top no-repeat;
+  background-color: white;
   @media (max-width: 550px) {
     background-position: top left;
   }
@@ -177,7 +178,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 20px 0;
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     display: none;
   }
 }

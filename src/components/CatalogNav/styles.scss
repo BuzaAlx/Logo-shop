@@ -1,6 +1,6 @@
 .main__menu {
   position: relative;
-  z-index: 100;
+  z-index: 10;
   background: url(../../assets/img/bg_menu.jpg) top repeat;
 }
 
@@ -78,6 +78,9 @@
   transform: translateY(-50%);
   width: 14px;
   height: 14px;
+  @media (max-width: 1000px) {
+    transform: rotate(90deg) translateX(-50%);
+  }
 }
 
 .submenu {
@@ -103,22 +106,4 @@
   color: black;
   border: 2px solid #098494;
   border-left: none;
-}
-
-.submenu__list {
-  border-bottom: 1px solid #dedede;
-  padding: 20px 0;
-}
-
-.submenu__link {
-  color: #1ab9ce;
-  font-size: 12px;
-  font-weight: 300;
-  display: block;
-  letter-spacing: 0.3px;
-  padding: 10px 40px;
-  &:hover {
-    background-color: #71c7d3;
-    color: #fff;
-  }
 }

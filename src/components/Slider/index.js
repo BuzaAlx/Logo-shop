@@ -1,20 +1,17 @@
 import React from "react";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
+import "./styles.scss";
 import image_1 from "../../assets/img/mainslider/01.jpg";
 import image_2 from "../../assets/img/mainslider/02.jpg";
-import "./styles.scss";
 
 // ---
 import SwiperCore, { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/components/pagination/pagination.scss";
 SwiperCore.use([Pagination]);
 // ---
 
 export default function Slider() {
-  let sliderImages = [image_1, image_2];
-
   return (
     <div className="main-slider">
       <Swiper
@@ -25,7 +22,6 @@ export default function Slider() {
           clickable: true,
           renderBullet: (index, className) => {
             className += ` slide${index + 1}`;
-            debugger;
             return '<span class="' + className + '">' + (index + 1) + "</span>";
           },
         }}

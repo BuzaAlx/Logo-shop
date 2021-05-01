@@ -1,32 +1,56 @@
 import React from "react";
+import useWindowSize from "../../../hooks/useWindowSize";
 import Product from "../../Product";
+import SubmenuList from "../SubmenuList";
 
-function Item({ submenu, id, label, visibleSideID, setVisibleSideID }) {
-  let classItem = `menu-body__link ${submenu ? "menu-body__link--parent" : ""}`;
+function Item({
+  submenu,
+  id,
+  label,
+  visibleSideID,
+  setVisibleSideID,
+  acordionItem,
+  setAcordionItem,
+}) {
+  const { width } = useWindowSize();
+  let isTablet = width < 1000;
 
+  let classItem = `menu-body__item ${
+    visibleSideID === id ? "menu-body__item--active" : ""
+  }`;
+  let classLink = `menu-body__link ${submenu ? "menu-body__link--parent" : ""}`;
   let classSubMenu = `submenu ${
     submenu && visibleSideID === id ? "submenu--open" : ""
   }`;
 
-  // let classSubMenu = "submenu submenu--open";
-
   let handleEnter = (e) => {
+    if (isTablet) return;
     if (!submenu) {
       setVisibleSideID(null);
       return;
     }
     setVisibleSideID(id);
   };
+  // ----------------------
+  const handleClick = (e) => {
+    if (!isTablet || !submenu) return;
+    setAcordionItem((prevId) => {
+      if (prevId === id) {
+        return null;
+      } else {
+        return id;
+      }
+    });
+  };
 
   return (
     <li
-      className={`menu-body__item ${
-        visibleSideID === id ? "menu-body__item--active" : ""
-      }`}
+      className={classItem}
       key={id}
+      onClick={(e) => handleClick(e)}
       onMouseEnter={(e) => handleEnter(e)}
     >
-      <a className={classItem} href="#">
+      <a className={classLink} href="#">
         {label}
       </a>
 
@@ -35,32 +59,12 @@ function Item({ submenu, id, label, visibleSideID, setVisibleSideID }) {
         onMouseEnter={(e) => setVisibleSideID(id)}
         onMouseLeave={(e) => setVisibleSideID(null)}
       >
-        <ul className="submenu__list">
-          <li>
-            <a className="submenu__link" href="#">
-              Всепогодный
-            </a>
-          </li>
-          <li>
-            <a className="submenu__link" href="#">
-              Для помещений
-            </a>
-          </li>
-          <li>
-            <a className="submenu__link" href="#">
-              Профессиональный
-            </a>
-          </li>
-          <li>
-            <a className="submenu__link" href="#">
-              Любительский
-            </a>
-          </li>
-        </ul>
+        <SubmenuList />
         <div className="submenu__product">
           <Product />
         </div>
       </div>
+      {acordionItem === id && <SubmenuList acordion />}
     </li>
   );
 }

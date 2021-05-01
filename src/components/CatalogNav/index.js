@@ -8,6 +8,7 @@ import { data } from "./data";
 function Sidebar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [visibleSideID, setVisibleSideID] = useState(null);
+  const [acordionItem, setAcordionItem] = useState(null);
   let burgerClasses = `menu-main__body menu-body ${menuOpen ? "_open" : ""}`;
 
   return (
@@ -32,6 +33,8 @@ function Sidebar() {
                 {...el}
                 visibleSideID={visibleSideID}
                 setVisibleSideID={setVisibleSideID}
+                acordionItem={acordionItem}
+                setAcordionItem={setAcordionItem}
               />
             );
           })}

@@ -1,15 +1,27 @@
 .main {
   padding: 160px 0 0 0;
+  @media (max-width: 800px) {
+    padding: 120px 0 0 0;
+  }
 }
 .main__container {
   display: flex;
+  @media (max-width: 1000px) {
+    display: block;
+  }
 }
 
 .main__aside {
   flex: 0 0 260px;
+  @media (max-width: 1000px) {
+    margin-bottom: 40px;
+  }
 }
 
 .main__content {
   flex: 1 1 auto;
   padding-left: 30px;
+  @media (max-width: 1000px) {
+    padding-left: 0;
+  }
 }

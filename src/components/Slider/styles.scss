@@ -15,6 +15,9 @@
   text-transform: uppercase;
   line-height: 43px;
   margin: 0 0 50px 0;
+  @media (max-width: 450px) {
+    font-size: 32px;
+  }
 }
 .main-slider__title-text {
   display: block;
@@ -55,6 +58,9 @@
     content: "₽";
     font-size: 30px;
     margin: 0 0 0 10px;
+  }
+  @media (max-width: 450px) {
+    font-size: 32px;
   }
 }
 .main-slider__about {
