@@ -1,0 +1,124 @@
+.main__menu {
+  position: relative;
+  z-index: 100;
+  background: url(../../assets/img/bg_menu.jpg) top repeat;
+}
+
+.menu-main__head {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-main__title {
+  flex: 1 1 auto;
+  color: #fff;
+  font-family: UniSans;
+  line-height: 116.66667%;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+.menu-main__burger {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  background-color: #068292;
+  position: relative;
+  cursor: pointer;
+  z-index: 5;
+  padding: 10px 6px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.menu-main__body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease-out;
+  overflow: hidden;
+}
+
+._open {
+  max-height: 1000px;
+  transition: max-height 0.35s ease-out;
+}
+
+.menu-body__item {
+  border-bottom: 1px solid #1aa7b9;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.menu-body__item--active {
+  background-color: #098494;
+}
+
+.menu-body__link {
+  letter-spacing: 0.3px;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  display: block;
+  padding: 12px 20px;
+  position: relative;
+  &:hover {
+    background-color: #098494;
+  }
+}
+
+.menu-body__link--parent::after {
+  content: "";
+  background: url(../../assets/img/menu_arrow.png) 0 0 no-repeat;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+}
+
+.submenu {
+  max-width: 0;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  overflow: hidden;
+
+  background-color: #fff;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.submenu--open {
+  max-width: 500px;
+  width: 100%;
+  color: black;
+  border: 2px solid #098494;
+  border-left: none;
+}
+
+.submenu__list {
+  border-bottom: 1px solid #dedede;
+  padding: 20px 0;
+}
+
+.submenu__link {
+  color: #1ab9ce;
+  font-size: 12px;
+  font-weight: 300;
+  display: block;
+  letter-spacing: 0.3px;
+  padding: 10px 40px;
+  &:hover {
+    background-color: #71c7d3;
+    color: #fff;
+  }
+}
