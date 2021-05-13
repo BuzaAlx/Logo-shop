@@ -1,0 +1,65 @@
+.main__about-section {
+  margin: 0 0 38px 0;
+}
+.section-about {
+}
+.section-about__container {
+}
+
+.section-about__body {
+  padding: 45px 35px 15px 35px;
+  background: url(../../assets/img/bg_text.jpg) 0 0 repeat;
+}
+.section-about__title {
+  color: #22b7ca;
+  font-family: UniSans;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin: 0 0 28px 0;
+}
+.section-about__row {
+  display: flex;
+  margin: 0 -30px;
+}
+.section-about__column {
+  padding: 0 30px;
+  flex: 0 1 50%;
+  ///@at-root
+  color: #fff;
+  position: relative;
+  margin: 0 0 30px 0;
+  p {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 0 0 20px 0;
+  }
+}
+.section-about__list-title {
+  font-size: inherit;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0 0 5px 0;
+}
+.section-about__list {
+  li {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 0 0 5px 0;
+    &::before {
+      content: "";
+      margin: 0 17px 0 7px;
+      display: inline-block;
+      width: 11px;
+      height: 12px;
+      background: url(../../assets/img/icons/li_arrow.png) left 1px no-repeat;
+    }
+  }
+}
+.section-about__image {
+  position: absolute;
+  right: -90px;
+  bottom: -260px;
+}
