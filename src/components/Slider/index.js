@@ -15,7 +15,11 @@ export default function Slider() {
   return (
     <div className="main-slider">
       <Swiper
-        slidesPerView="auto"
+        observeParents={true}
+        observer={true}
+        autoHeight={true}
+        slidesPerView={1}
+        spaceBetween={0}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         pagination={{
@@ -41,9 +45,11 @@ const Slide = ({ bg }) => {
   return (
     <>
       <div className="main-slider__content">
-        <div className="main-slider__title">
-          <span className="main-slider__title-text">Мега</span> Распродажа
-        </div>
+        <h3 className="main-slider__title">
+          <span className="main-slider__title-text">Мега </span>
+          Распродажа
+        </h3>
+
         <div className="main-slider__subtitle">
           <p>
             <span className="main-slider__text-1">Успей купить</span> тренажеры
