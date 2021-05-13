@@ -1,0 +1,30 @@
+.submenu__list {
+  border-bottom: 1px solid #dedede;
+  padding: 20px 0;
+}
+
+.submenu__link {
+  color: #1ab9ce;
+  font-size: 12px;
+  font-weight: 300;
+  display: block;
+  letter-spacing: 0.3px;
+  padding: 10px 40px;
+  &:hover {
+    background-color: #71c7d3;
+    color: #fff;
+  }
+}
+
+.vertical-list {
+  border: none;
+  background-color: #c1c1c1a1;
+}
+
+.vertical-link {
+  color: white;
+}
+
+.submenu__product {
+  padding: 0 15px;
+}

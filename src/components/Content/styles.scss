@@ -16,12 +16,15 @@
   @media (max-width: 1000px) {
     margin-bottom: 40px;
   }
+  z-index: 100;
 }
 
 .main__content {
   flex: 1 1 auto;
   padding-left: 30px;
+  overflow: hidden;
   @media (max-width: 1000px) {
     padding-left: 0;
   }
+  z-index: 50;
 }

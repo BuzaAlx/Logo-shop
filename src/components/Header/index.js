@@ -101,12 +101,12 @@ function Header() {
             <div className="header-info__column">
               <div className="header-info__shedule with-icon">
                 <p className="work-time">
-                  <span>Пн–Пт:</span>
-                  "09:00–21:00;"
+                  <span>Пн–Пт: </span>
+                  09:00–21:00;
                 </p>
                 <p className="work-time">
-                  <span>Сб–Вс:</span>
-                  "10:00–20:00"
+                  <span>Сб–Вс: </span>
+                  10:00–20:00
                 </p>
               </div>
             </div>

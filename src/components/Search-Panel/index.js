@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import "./styles.scss";
+
 function SearchPanel() {
   const [categoriesOpen, setCategoriesOpen] = useState(false);
   const [products, setProducts] = useState([
@@ -35,6 +36,7 @@ function SearchPanel() {
   const selectorMarkup = () => {
     return productsLength ? `Выбрано: ${productsLength}` : "Везде";
   };
+
   return (
     <form className="search-panel" onSubmit={handleSubmit} action="#">
       <div className="search_panel__select">

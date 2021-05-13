@@ -1,7 +1,11 @@
 .main__menu {
   position: relative;
-  z-index: 10;
+  // z-index: 10;
   background: url(../../assets/img/bg_menu.jpg) top repeat;
+}
+
+.menu-main {
+  margin: 0 0 40px 0;
 }
 
 .menu-main__head {
@@ -37,13 +41,12 @@
 .menu-main__body {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.35s ease-out;
+  transition: max-height 0.5s linear;
   overflow: hidden;
 }
 
 ._open {
   max-height: 1000px;
-  transition: max-height 0.35s ease-out;
 }
 
 .menu-body__item {
@@ -84,24 +87,24 @@
 }
 
 .submenu {
-  max-width: 0;
   height: 100%;
-  width: 0;
   position: absolute;
   top: 0;
   left: 100%;
   overflow: hidden;
-
   background-color: #fff;
   z-index: 2;
   overflow: hidden;
   transition: all 0.2s ease-out;
   color: transparent;
   white-space: nowrap;
+  border: 2px solid #098494;
+  transform: translateX(-100%);
+  z-index: -20;
 }
 
 .submenu--open {
-  max-width: 500px;
+  transform: translateX(0%);
   width: 100%;
   color: black;
   border: 2px solid #098494;

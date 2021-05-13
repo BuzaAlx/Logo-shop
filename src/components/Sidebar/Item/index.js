@@ -3,6 +3,8 @@ import useWindowSize from "../../../hooks/useWindowSize";
 import Product from "../../Product";
 import SubmenuList from "../SubmenuList";
 
+let productName = "Домашний теннисный стол Donic Indoor Roller 800 Green";
+
 function Item({
   submenu,
   id,
@@ -61,7 +63,7 @@ function Item({
       >
         <SubmenuList />
         <div className="submenu__product">
-          <Product />
+          <Product productName={productName} noHover />
         </div>
       </div>
       {acordionItem === id && <SubmenuList acordion />}
